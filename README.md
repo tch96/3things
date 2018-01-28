@@ -32,3 +32,7 @@ After Meteor is installed, run in the root folder:
 ```
 meteor run
 ```
+View application at:
+```
+localhost:3000
+```
