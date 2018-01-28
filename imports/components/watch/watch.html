@@ -1,0 +1,31 @@
+<button class="roombtn" ng-click="$ctrl.vid1(); vid1=true; vid2=false; vid3=false;">(｡◕‿◕｡) </button>
+<button class="roombtn" ng-click="$ctrl.vid2(); vid1=false; vid2=true; vid3=false;">¯\_(ツ)_/¯</button>
+<button class="roombtn" ng-click="$ctrl.vid3(); vid1=false; vid2=false; vid3=true;">(ʘ‿ʘ)</button>
+
+<div id='roompic'>
+  <img src="roompic.png" alt="room instructions"></img>
+</div>
+
+<div id="vidRoom1" class="vidroom" ng-show="vid1">
+  <video id="video1" class="video" height="auto" width="100%" autoplay></video>
+  <!-- <chat></chat> -->
+</div>
+
+<div id="vidRoom2" class="vidroom" ng-show="vid2">
+  <video id="video2" class="video" height="auto" width="100%" autoplay></video>
+  <!-- <chat></chat> -->
+</div>
+<div id="vidRoom3" class="vidroom"  ng-show="vid3">
+  <video id="video3"  class="video" height="auto" width="100%" autoplay></video>
+  <!-- <chat></chat> -->
+</div>
+<!-- <div class="listbox2">
+<button id="FAV" ng-click="$ctrl.favoriteVid();">Favorite</button>
+<br>
+<br>
+<br>
+Your favorites:<br>
+<li ng-repeat="item in $ctrl.favorites">
+	{{item.video}}
+</li>
+</div> -->

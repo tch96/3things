@@ -1,0 +1,71 @@
+<button class="foodBtn" ng-repeat="food in $ctrl.foods">
+	<div ng-click="$ctrl.foodChosen(food)">
+		<b>{{food.name}}</b> <br>
+		Contains: {{food.ingredients}} <br>
+        Price: ${{food.price}} <br>
+
+	</div>
+</button>
+<br>
+
+<button id="skipbtn" ng-click="$ctrl.suggest3()"><span>None of these</span></button>
+<br>
+<br>
+
+<div id="container" ng-show="$ctrl.showConfirm()">
+	<form ng-submit="$ctrl.makeOrder()">
+    <span style="color:white;">Where do you want your {{$ctrl.foodchose.name}} to be delivered to?    </span>  <br>
+    <div class="row">
+      <div class="col-25">
+        Street Address
+      </div>
+      <div class="col-75">
+        <input class="forminput" ng-model="$ctrl.streetAd" type="text" name="text" required=""/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        Zip Code
+      </div>
+      <div class="col-75">
+        <input class="forminput" ng-model="$ctrl.zipcode" type="text" name="text" required="" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        City
+      </div>
+      <div class="col-75">
+        <input class="forminput" ng-model="$ctrl.city" type="text" name="text" required=""/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        State
+      </div>
+      <div class="col-75">
+        <input class="forminput" ng-model="$ctrl.state" type="text" name="text" required=""/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        Phone
+      </div>
+      <div class="col-75">
+        <input class="forminput" ng-model="$ctrl.phone" type="text" name="text" required=""/>
+      </div>
+    </div>
+    <input type="submit" value="Confirm Order" id="confirmorder"/>
+  </form>
+</div>
+
+<div class="listbox"> 
+Your past orders:
+<li ng-repeat="order in $ctrl.foodorders">
+	{{order.text}}
+
+</li>
+</div>

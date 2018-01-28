@@ -1,0 +1,14 @@
+<div class="canvas">
+	<div class="pixel" ng-repeat="pixel in $ctrl.pixels" ng-style="{'background-color':pixel.color}" ng-click="$ctrl.changeColor(pixel,$ctrl.currentColor)">
+	</div>
+</div>
+
+<div>
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='white'" ng-style="{'background-color':'white'}">
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='black'" ng-style="{'background-color':'black'}">
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='red'"   ng-style="{'background-color':'red'}">
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='green'" ng-style="{'background-color':'green'}">
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='blue'"  ng-style="{'background-color':'blue'}">
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='yellow'" ng-style="{'background-color':'yellow'}" >
+<input class="colorbtn" type="button" ng-click="$ctrl.currentColor='LavenderBlush'" ng-style="{'background-color':'pink'}">
+</div>

@@ -1,0 +1,19 @@
+<header>
+</header>
+
+<login-buttons></login-buttons>
+
+<div id="actions">
+    <button class="actionBtn" ng-click="eat=true;watch=false;listen=false;$ctrl.pauseVids();">Eat</button>
+    <button class="actionBtn" ng-click="eat=false;watch=true;listen=false;$ctrl.pauseAudio();$ctrl.playCurVid()">Watch</button>
+    <button class="actionBtn" ng-click="eat=false;watch=false;listen=true;$ctrl.pauseVids(); $ctrl.tuneIn()">Listen</button>
+</div>
+
+<div id="doodleBtn-container">
+  <button id="doodleBtn" class="actionBtn" ng-click="doodle = !doodle">Doodle</button>
+</div>
+
+<threefood ng-show="eat" ></threefood>
+<watch ng-show="watch"></watch>
+<music ng-show="listen"></music>
+<painting ng-show="doodle"></painting>
